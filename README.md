@@ -34,33 +34,33 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            fab:fab_addButtonColorNormal="@color/white"				//菜单按钮正常的背景颜色	
-            fab:fab_addButtonColorPressed="@color/white_pressed"	//菜单按钮按下的背景颜色
-            fab:fab_addButtonSize="mini"							//菜单按钮的大小，normal表示56dp，mini表示40dp
-            fab:fab_addButtonPlusIconColor="@color/half_black"		//图像的颜色，区分背景，图像旁边空白的地方就是背景	
-            fab:fab_expandDirection="down"							//显示悬浮按钮的方向，up表示向上（默认），down表示向下，left表示向左，right表示向右
-            fab:fab_labelStyle="@style/menu_labels_style"			//设置标签文本的风格，默认是灰色背景，白色字体
-            android:layout_marginTop="16dp"							//android的属性就不解释了！！
+            fab:fab_addButtonColorNormal="@color/white"		//菜单按钮正常的背景颜色	
+            fab:fab_addButtonColorPressed="@color/white_pressed"//菜单按钮按下的背景颜色
+            fab:fab_addButtonSize="mini"			//菜单按钮的大小，normal表示56dp，mini表示40dp
+            fab:fab_addButtonPlusIconColor="@color/half_black"	//图像的颜色，区分背景，图像旁边空白的地方就是背景	
+            fab:fab_expandDirection="down"//显示悬浮按钮的方向，up表示向上（默认），down表示向下，left表示向左，right表示向右
+            fab:fab_labelStyle="@style/menu_labels_style"//设置标签文本的风格，默认是灰色背景，白色字体
+            android:layout_marginTop="16dp"		//android的属性就不解释了！！
             android:layout_marginRight="16dp"
             android:layout_marginEnd="16dp">
 
-        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton		//悬浮按钮
+        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton//悬浮按钮
                 android:id="@+id/action_enable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"			
-                fab:fab_colorNormal="@color/white"					//正常的颜色
+                fab:fab_colorNormal="@color/white"		//正常的颜色
                 fab:fab_title="Set bottom menu enabled/disabled"	//标签文本显示的内容
-                fab:fab_icon="@drawable/icon_add"					//显示的图标
-                fab:fab_colorPressed="@color/white_pressed"			//悬浮按钮按下时显示的颜色
+                fab:fab_icon="@drawable/icon_add"		//显示的图标
+                fab:fab_colorPressed="@color/white_pressed"	//悬浮按钮按下时显示的颜色
 		/>
  
         <com.example.FloatingActionButton.floatingactionbutton.AddFloatingActionButton  //另一种悬浮按钮
                 android:id="@+id/semi_transparent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                fab:fab_plusIconColor="@color/red"								//图像的颜色	
-                fab:fab_colorNormal="@color/blue_transparent"					//悬浮按钮正常的颜色
-                fab:fab_colorPressed="@color/blue_transparent_pressed"			//悬浮按钮按下的颜色
+                fab:fab_plusIconColor="@color/red"		//图像的颜色	
+                fab:fab_colorNormal="@color/blue_transparent"		//悬浮按钮正常的颜色
+                fab:fab_colorPressed="@color/blue_transparent_pressed"	//悬浮按钮按下的颜色
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="16dp"/>
 
@@ -203,18 +203,29 @@ public class RightTopActivity extends Activity {
 
 
 ###上下左右四种效果，分开展示：
+
 ![2](http://i.imgur.com/zY7gln0.gif)
 
 后期，我对右上角部分页面资源文件进行了一点修改，效果：
+
 ![3](http://i.imgur.com/BtD0WrO.png)
+
 你也可以根据自己的需求，重新写一个style设置样式
+
 像下面图片的样式，还是不错的，写起来也不难，效果：
+
 ![4](http://i.imgur.com/UtfnaLD.png)
 
 
 #共勉：
+
+
 ##我们要学会狠忍静（很冷静）
+
 ###狠：男人对自己狠一点才能有作为。
+
 ###忍：适当忍住一下欲望，你才能得到更多。
+
 ###静：静下心来才能好好想事情和做事情。
+
 ![5](http://i.imgur.com/y71nGfq.jpg)
