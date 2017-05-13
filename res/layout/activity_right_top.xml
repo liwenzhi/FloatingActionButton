@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fab="http://schemas.android.com/apk/res-auto"
+                android:background="@color/background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <!--右上角那组按钮-->
+    <com.example.FloatingActionButton.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/multiple_actions_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            fab:fab_addButtonColorNormal="@color/red"
+            fab:fab_addButtonColorPressed="@color/red_pressed"
+            fab:fab_addButtonSize="mini"
+            fab:fab_addButtonPlusIconColor="@color/menu_plus"
+            fab:fab_expandDirection="down"
+            fab:fab_labelStyle="@style/labels_style_orange"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp">
+        <!--没有任何操作的按钮，右边那组最下面那个-->
+        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_colorPressed="@color/red_pressed"
+                fab:fab_size="mini"/>
+        <!--右上角第三个（倒数第二个），单击可消失的！-->
+        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                android:id="@+id/button_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_colorPressed="@color/white_pressed"
+                fab:fab_icon="@drawable/ic_fab_star"
+                fab:fab_title="Click to remove"/>
+        <!--一开始就消失的按钮-->
+        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                android:id="@+id/button_gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_icon="@drawable/icon_delete"
+                fab:fab_colorPressed="@color/white_pressed"/>
+        <!--右上角第二个-->
+        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_enable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_title="Set bottom menu enabled/disabled"
+                fab:fab_icon="@drawable/icon_add"
+                fab:fab_colorPressed="@color/white_pressed"/>
+
+    </com.example.FloatingActionButton.floatingactionbutton.FloatingActionsMenu>
+
+
+</RelativeLayout>

@@ -1,0 +1,270 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fab="http://schemas.android.com/apk/res-auto"
+              android:background="@color/background"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+        >
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="rightTop"
+            android:text="右上角最右边那组"
+            android:background="#ff0"
+            android:textColor="#000"
+            />
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="leftTop"
+            android:text="右上角左边那组"
+            android:background="#f0f"
+            android:textColor="#000"
+            />
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="leftBottom"
+            android:text="左下角那组"
+            android:background="#0ff"
+            android:textColor="#000"
+            />
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="rightBottom"
+            android:text="右下角那组"
+            android:background="#00f"
+            android:textColor="#000"
+            />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!--底下居中那个星星悬浮按钮-->
+        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                android:id="@+id/pink_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_icon="@drawable/ic_fab_star"
+                fab:fab_colorNormal="@color/pink"
+                fab:fab_colorPressed="@color/pink_pressed"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"/>
+        <!--底下居中那个悬浮文本Text below button-->
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/pink_icon"
+                android:text="Text below button"
+                android:layout_centerHorizontal="true"
+                style="@style/menu_labels_style"
+                android:layout_marginBottom="48dp"/>
+
+        <!--底下居中那个悬浮加号图像，和Text below button重叠一起-->
+        <com.example.FloatingActionButton.floatingactionbutton.AddFloatingActionButton
+                android:id="@+id/semi_transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/pink_icon"
+                fab:fab_plusIconColor="@color/red"
+                fab:fab_colorNormal="@color/blue_semi_transparent"
+                fab:fab_colorPressed="@color/blue_semi_transparent_pressed"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"/>
+        <!--底下居中那个小星星悬浮按钮-->
+        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                android:id="@+id/setter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/semi_transparent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"/>
+        <!-- 左下角那个加号按钮-->
+        <com.example.FloatingActionButton.floatingactionbutton.AddFloatingActionButton
+                android:id="@+id/normal_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                fab:fab_plusIconColor="@color/half_black"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_colorPressed="@color/white_pressed"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"/>
+        <!-- 左下角那个加号按钮的上面那个按钮 一组按钮   -->
+        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/right_labels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@id/normal_plus"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                fab:fab_addButtonColorNormal="@color/white"
+                fab:fab_addButtonColorPressed="@color/white_pressed"
+                fab:fab_addButtonPlusIconColor="@color/half_black"
+                fab:fab_addButtonSize="mini"
+                fab:fab_labelStyle="@style/menu_labels_style"
+                fab:fab_labelsPosition="right">
+
+            <!--左上角白色那个按钮-->
+            <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_title="Label on the right"
+                    fab:fab_colorPressed="@color/white_pressed"/>
+            <!--左上角白色第二个按钮-->
+            <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_size="mini"
+                    fab:fab_title="Another one on the right"
+                    fab:fab_colorPressed="@color/white_pressed"/>
+
+        </com.example.FloatingActionButton.floatingactionbutton.FloatingActionsMenu>
+
+        <!--右边最底下那个组按钮-->
+        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/multiple_actions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                fab:fab_addButtonColorNormal="@color/white"
+                fab:fab_addButtonColorPressed="@color/white_pressed"
+                fab:fab_addButtonPlusIconColor="@color/half_black"
+                fab:fab_labelStyle="@style/menu_labels_style"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp">
+            <!--右下角顶上那个-->
+            <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/action_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_title="Action A"
+                    fab:fab_colorPressed="@color/white_pressed"/>
+            <!--右下角顶上第二个-->
+            <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/action_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_title="Action with a very long name that won\'t fit on the screen"
+                    fab:fab_colorPressed="@color/white_pressed"/>
+
+        </com.example.FloatingActionButton.floatingactionbutton.FloatingActionsMenu>
+
+        <!--右上角那组按钮-->
+        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/multiple_actions_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                fab:fab_addButtonColorNormal="@color/white"
+                fab:fab_addButtonColorPressed="@color/white_pressed"
+                fab:fab_addButtonSize="mini"
+                fab:fab_addButtonPlusIconColor="@color/half_black"
+                fab:fab_expandDirection="down"
+                fab:fab_labelStyle="@style/menu_labels_style"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp">
+
+            <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+            <!--右上角第三个，单击可消失的！-->
+            <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/button_remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_title="Click to remove"/>
+
+            <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/button_gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"/>
+            <!--右上角第二个-->
+            <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/action_enable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_title="Set bottom menu enabled/disabled"
+                    fab:fab_colorPressed="@color/white_pressed"/>
+
+        </com.example.FloatingActionButton.floatingactionbutton.FloatingActionsMenu>
+        <!--右上角左边那组-->
+        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/multiple_actions_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/multiple_actions_down"
+                android:layout_toStartOf="@+id/multiple_actions_down"
+                android:layout_alignParentTop="true"
+                fab:fab_addButtonColorNormal="@color/white"
+                fab:fab_addButtonColorPressed="@color/white_pressed"
+                fab:fab_addButtonSize="mini"
+                fab:fab_addButtonPlusIconColor="@color/half_black"
+                fab:fab_addButtonStrokeVisible="false"
+                fab:fab_expandDirection="left"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp">
+
+            <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"/>
+
+            <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+            <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+        </com.example.FloatingActionButton.floatingactionbutton.FloatingActionsMenu>
+
+        <!--最中间那个按钮-->
+        <com.example.FloatingActionButton.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setter_drawable"
+                android:layout_above="@id/setter"
+                android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+</LinearLayout>
